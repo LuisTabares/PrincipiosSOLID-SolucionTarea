@@ -11,5 +11,5 @@ package co.unicauca.parkinglot.domain;
  * @author Luis Tabares
  */
 public enum TypeEnum {
-    MOTO, CAR, TRUCK, JEJE
+    MOTO, CAR, TRUCK
 }
