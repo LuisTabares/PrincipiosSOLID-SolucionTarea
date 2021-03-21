@@ -1,9 +1,19 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Copyright (C) 2021 Luis Tabares
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
 package co.unicauca.parkinglot.domain;
 
 /**
@@ -13,42 +23,75 @@ package co.unicauca.parkinglot.domain;
 public class Vehicle {
 
     /**
-     *Placa
+     * Placa
      */
     private String plate;
 
     /**
-     *Tipo: carro, moto, camion
+     * Tipo: carro, moto, camion
      */
     private TypeEnum type;
-    
-    public Vehicle(String plate, TypeEnum type){
+
+    /**
+     * Constructor parametrizado
+     *
+     * @param plate placa del vehiculo
+     * @param tipo tipo de vehiculo
+     */
+    public Vehicle(String plate, TypeEnum tipo) {
         this.plate = plate;
-        this.type = type;
+        this.type = tipo;
     }
 
-    public Vehicle(){
+    /**
+     * Constructor por defecto
+     */
+    public Vehicle() {
     }
-    
+
     //Getters and Setters
-
-    public String getPlate(){
+    /**
+     * Metodo getter
+     *
+     * @return la placa del vehiculo
+     */
+    public String getPlate() {
         return plate;
     }
 
-    public void setPlate(String placa){
+    /**
+     * Metodo setter
+     *
+     * @param placa cadena que se asigna como placa del vehiculo
+     */
+    public void setPlate(String placa) {
         this.plate = placa;
     }
 
-    public TypeEnum getType(){
+    /**
+     * Metodo getter
+     *
+     * @return el tipo del vehiculo
+     */
+    public TypeEnum getType() {
         return this.type;
     }
 
-    public void setType(TypeEnum type){
+    /**
+     * Metodo setter
+     *
+     * @param type parametro TypeEnum que se asigna como tipo de vehiculo
+     */
+    public void setType(TypeEnum type) {
         this.type = type;
     }
 
-    public String toString(){
+    /**
+     * Metodo toString()
+     *
+     * @return cadena con los datos del vehiculo
+     */
+    public String toString() {
         return "Vehicle{" + "plate=" + this.plate + ", type=" + this.type + '}';
     }
 }
